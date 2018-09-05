@@ -1,0 +1,23 @@
+{
+    "name": "artecfeng/tpredis",
+    "description": "thinkphp5 redi类库",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "冯腾举",
+            "email": "824431999@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "artecfeng\\tpredis\\": ["src/"]
+        }
+    },
+    "scripts":{
+        "post-root-package-install": [
+            "@php -r \"file_exists('../../config/redisconf.php') || copy('./src/redisconf.php', '../../config/redisconf.php');\""
+        ]
+    }
+}
