@@ -1,6 +1,6 @@
 {
     "name": "artecfeng/tpredis",
-    "description": "thinkphp5 redi类库",
+    "description": "thinkphp5 redis类库",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,9 @@
             "email": "824431999@qq.com"
         }
     ],
-    "require": {},
+    "require": {
+        "artecfeng/tpredis": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "artecfeng\\tpredis\\": ["src/"]
@@ -19,5 +21,11 @@
         "post-root-package-install": [
             "@php -r \"file_exists('../../config/redisconf.php') || copy('./src/redisconf.php', '../../config/redisconf.php');\""
         ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.laravel-china.org"
+        }
     }
 }
