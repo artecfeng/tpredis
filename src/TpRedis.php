@@ -34,7 +34,7 @@
         ];
 
 
-        public function __construct($options = []) {
+        public function __construct() {
 
             if (!extension_loaded('redis')) {
 
